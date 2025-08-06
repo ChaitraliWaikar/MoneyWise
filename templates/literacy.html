@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h2>🤖 AI Financial Literacy Assistant</h2>
+        <p class="text-muted">Ask any financial question and get personalized, educational responses!</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="topic" class="form-label">Ask about a financial topic:</label>
+                        <input type="text" name="topic" id="topic" class="form-control" 
+                               placeholder="e.g., budgeting, saving, emergency fund, investing..." required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">🔍 Get Info</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="alert alert-info">
+            <h6 class="alert-heading">💡 Example Questions:</h6>
+            <ul class="mb-0 small">
+                <li>How to create an emergency fund?</li>
+                <li>Budgeting for beginners</li>
+                <li>Difference between needs and wants</li>
+                <li>How to start investing?</li>
+                <li>Credit score basics</li>
+                <li>How to pay off debt fast?</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% if response %}
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="alert alert-success">
+            <h5 class="alert-heading">🤖 AI Response:</h5>
+            <div style="white-space: pre-wrap; line-height: 1.6;">{{ response }}</div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

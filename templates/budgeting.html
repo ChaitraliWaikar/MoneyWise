@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h2>📊 Budget Analyzer</h2>
+        <p class="text-muted">Enter your monthly financial information to get AI-powered budget analysis and recommendations.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="income" class="form-label">Monthly Income ($)</label>
+                        <input type="number" name="income" id="income" class="form-control" step="0.01" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="needs" class="form-label">Needs - Housing, Food, Utilities ($)</label>
+                        <input type="number" name="needs" id="needs" class="form-control" step="0.01" required>
+                        <div class="form-text">Essential expenses you can't avoid</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="wants" class="form-label">Wants - Entertainment, Dining Out ($)</label>
+                        <input type="number" name="wants" id="wants" class="form-control" step="0.01" required>
+                        <div class="form-text">Non-essential purchases and entertainment</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="savings_debt" class="form-label">Savings & Debt Payments ($)</label>
+                        <input type="number" name="savings_debt" id="savings_debt" class="form-control" step="0.01" required>
+                        <div class="form-text">Money going to savings accounts and debt payments</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success w-100">🔍 Analyze My Budget</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="alert alert-info">
+            <h6 class="alert-heading">💡 The 50/30/20 Rule:</h6>
+            <ul class="mb-0">
+                <li><strong>50%</strong> for Needs (housing, food, utilities)</li>
+                <li><strong>30%</strong> for Wants (entertainment, dining out)</li>
+                <li><strong>20%</strong> for Savings & Debt Payment</li>
+            </ul>
+        </div>
+        
+        <div class="alert alert-warning">
+            <h6 class="alert-heading">📝 Examples:</h6>
+            <ul class="mb-0">
+                <li><strong>Needs:</strong> Rent, groceries, insurance, minimum debt payments</li>
+                <li><strong>Wants:</strong> Movies, restaurants, hobbies, subscriptions</li>
+                <li><strong>Savings/Debt:</strong> Emergency fund, retirement, extra debt payments</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% if feedback %}
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="alert alert-success">
+            <h5 class="alert-heading">🤖 AI Budget Analysis:</h5>
+            <div style="white-space: pre-wrap;">{{ feedback }}</div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

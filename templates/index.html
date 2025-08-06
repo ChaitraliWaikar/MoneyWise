@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="jumbotron bg-white p-5 rounded shadow-sm">
+            <h1 class="display-4">Welcome to Financial Literacy App! 🎯</h1>
+            <p class="lead">Your AI-powered companion for better financial decisions and money management.</p>
+            <hr class="my-4">
+            <p>Choose from our helpful tools below to improve your financial literacy:</p>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">🤖 AI Financial Assistant</h5>
+                <p class="card-text">Ask questions about any financial topic and get personalized, educational responses powered by AI.</p>
+                <ul class="list-unstyled">
+                    <li>• Budgeting basics</li>
+                    <li>• Investment strategies</li>
+                    <li>• Debt management</li>
+                    <li>• Emergency funds</li>
+                </ul>
+                <a href="{{ url_for('literacy') }}" class="btn btn-primary">Start Learning →</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">📊 Budget Analyzer</h5>
+                <p class="card-text">Input your income and expenses to get AI-powered analysis and personalized budgeting recommendations.</p>
+                <ul class="list-unstyled">
+                    <li>• 50/30/20 rule analysis</li>
+                    <li>• Spending optimization</li>
+                    <li>• Savings strategies</li>
+                    <li>• Personalized tips</li>
+                </ul>
+                <a href="{{ url_for('budgeting') }}" class="btn btn-success">Analyze Budget →</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="alert alert-info">
+            <h6 class="alert-heading">💡 Quick Tips:</h6>
+            <ul class="mb-0">
+                <li>Start by asking about topics like "emergency fund" or "how to save money"</li>
+                <li>Use the budget analyzer to check if your spending follows the 50/30/20 rule</li>
+                <li>All responses are educational and powered by AI - always consult professionals for major financial decisions</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

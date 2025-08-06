@@ -1,0 +1,17 @@
+/* static/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+.navbar {
+    background-color: #343a40 !important;
+}
+.jumbotron {
+    background-color: #e9ecef;
+    padding: 4rem 2rem;
+    border-radius: .3rem;
+}
+.alert-info, .alert-success {
+    margin-top: 20px;
+    white-space: pre-wrap; /* Ensures line breaks in agent responses are respected */
+}
