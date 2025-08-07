@@ -17,4 +17,6 @@ It uses two agents — one for giving budgeting tips and another for answering b
 4. Run: `python app.py`  
 5. Open `http://localhost:5000`
 
+OR 
+run on browser : https://moneywise-n8ib.onrender.com/
 
